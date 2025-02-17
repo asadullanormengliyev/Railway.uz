@@ -4,7 +4,7 @@ This project is built on a **microservices architecture** for the railway ticket
 The system is designed to be **scalable**, **event-driven**, and a **high-performance** application.  
 
 ## 📌 Project Structure  
-![Project Structure]()  
+![Project Structure](https://github.com/asadullanormengliyev/Railway.uz/blob/main/Image.pdf)  
 
 ## 🚀 Functional Requirements  
 ✅ Users can search for routes  
