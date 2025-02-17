@@ -1,0 +1,47 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-server:8761/eureka
+server:
+  port: 8080
+
+spring:
+  application:
+    name: railway-user-service
+
+  datasource:
+    url: jdbc:postgresql://postgres:5432/railwayuserservice  # Bu yerda localhost ni postgres bilan almashtirdik
+    username: postgres
+    password: 5555
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+  kafka:
+    consumer:
+      group-id: group-id2
+
+jwt:
+  access:
+    token:
+      secretKey: "FFFFGGGGSSSEEEOOOPAASS888A99999ASSAASA09900AS889"
+      expire:
+        date: 900000000
+  refresh:
+    token:
+      secretKey: "FFFFGGGGSSSEEEOOOPAYYASSH8A99999ASSAASJKJKHHG9"
+      expire:
+        date: 86400000
+management:
+  tracing:
+    enabled: true
+    sampling:
+      probability: 1.0
+  zipkin:
+    tracing:
+      endpoint: http://zipkin-server:9411/api/v2/spans
+      export:
+        enabled: true
